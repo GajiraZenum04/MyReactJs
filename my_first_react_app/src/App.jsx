@@ -1,17 +1,21 @@
-
+import React from 'react';
+import './App.css';
 
 function App() {
 
   return (
-    <div>
-      <h2>My Learning Journey as a Web Developer</h2>
+    <div className="container">
 
-      <p>I started learning web development in 2025 and it has been an amazing experience so far.
+      <h2 id="main-heading">My Learning Journey as a Web Developer</h2>
+
+      <p className='intro'>
+        I started learning web development in 2025 and it has been an amazing experience so far.
         <br />
         I began with HTML, then moved on to CSS and JavaScript. I'm currently learning React.
       </p>
       
-      
+        <div className="section"
+        id="technologies">
         <h2>Technologies I have Learned</h2>
         <ol>
           <li>HTML</li>
@@ -26,7 +30,10 @@ function App() {
           <li>Responsive Web Design</li>
           <li>Building Interactive Forms</li>
         </ul>
+        </div>
       
+      <div className="section"
+      id="progress">
     <table border="1">
       <thead>
         <tr>
@@ -53,9 +60,10 @@ function App() {
         </tr>
       </tbody>
     </table>
+    </div>
 
     <p>
-      Read more about React on <a href="https://react.dev" target="_blank" rel="noreferrer"> the official Reacr website</a>
+      Read more about React on <a href="https://react.dev" target="_blank" rel="noreferrer"> the official React website</a>
 
     </p>
     <img 
@@ -63,72 +71,55 @@ function App() {
               alt="Learning Journey" 
               width="300"
            /> 
-
-           <fieldset>
+           <div className="section"
+           id="form-section">
+           <fieldset
+           className="form-fieldset">
               <legend>Contact Me</legend>
 
               <form>
-                <label>
-                  Name:
-                  <input type="text" name="name" />
-                </label>
-                <br />
+                <label htmlFor="name">Name:</label><br />
+                  <input type="text" id="name" name="name" className="input-field" /><br /><br />
+                
 
-                <label>
-                  Email:
-                  <input type="text" name="email" />
-                </label>
-                <br />
+                <label htmlFor="email">Email:</label><br />
+                  <input type="text" id="email" name="email" className="input-field" /><br /><br />
 
-                <label>
-                  Message:
-                  <br />
-                  <textarea name="message" rows="4" cols="30" />
-                </label>
-                <br />
+                <label htmlFor="message">Message:</label><br />
+                  <textarea id="message" name="message" rows="4" cols="30" className="input-field" /><br /><br />
 
-                <label>
-                  Gender:
-                  <input type="radio" name="gender" value="male" /> Male 
-                  <input type="radio" name="gender" value="female" /> Female
-                </label>
-                <br />
+                <label>Gender:</label><br />
+                  <input type="radio" id="male" name="gender" value="male" /> 
+                <label htmlFor="male">Male</label><br />
+                  <input type="radio" id="female" name="gender" value="female" /> 
+                <label htmlFor="female">Female</label><br /><br />
 
-                <label>
-                  Interest: 
-                  <input type="checkbox" value="coding" /> Coding
-                  <input type="checkbox" value="design" /> Design
-                </label>
-                <br />
+                <label>Interest:</label><br />
+                  <input type="checkbox" id="coding" value="coding" /> 
+                <label htmlFor="coding">Coding</label><br />
+                  <input type="checkbox" id="design" value="design" /> 
+                <label htmlFor="design">Design</label><br /><br />
 
-                <label>
-                  Age:
-                  <input type="number" name="age" />
-                </label>
-                <br />
+                <label htmlFor="age">Age:</label><br />
+                  <input type="number" id="age" name="age" className="input-field" /><br /><br /> 
 
-                <label>
-                  Favourite Language:
-                  <select name="language">
+                <label htmlFor="language">Favourite Language:</label><br />
+                  <select id="language" name="language" className="input-field">
                     <option value="html">HTML</option>
                     <option value="css">CSS</option>
                     <option value="javascript">JavaScript</option>
                     <option value="react">React</option>
-                  </select>
-                </label>
-                <br />
+                  </select><br /><br />
 
-                <label>
-                  Start Date:
-                <input type="date" name="startdate"/>
-                </label>
-                <br />
+                <label htmlFor="date">Start Date:</label><br />
+                <input type="date" id="startdate" name="startdate" className="input-field"/><br /><br />
 
-                <input type="submit" value="submit" />
+                <input type="submit" value="submit" className="submit-button" />
        </form>
-     </fieldset>            
+     </fieldset>
+   </div>            
    </div>
   );
 }
 
-export default App
+export default App;
