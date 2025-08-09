@@ -16,7 +16,7 @@ function App() {
           FRONTEND DEVELOPER
         </h2>
         <div className="border border-red-500 p-4 rounded-lg">
-        <p className="text-sm font medium text-center normal-case">
+        <p className="text-sm font-medium text-center normal-case">
           Passionate about building user-friendly interfaces and learning new technologies. I love creating clean and elegant designs with code. 
           </p>
           </div>
